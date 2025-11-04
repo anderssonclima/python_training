@@ -1,0 +1,25 @@
+# used to create a python environment with basic requirements to run python_basics.ipynb
+# in the terminal (while in the base environment), run the following command (replace $env:USERPROFILE\python_basics.yml for the actual local folder):
+# conda env create -n python_basics --file "$env:USERPROFILE\python_basics.yml"
+name: python_basics
+dependencies:
+  - python>=3.11, <3.12
+  - pip
+  - notebook
+  - pandas
+  - scipy                                                 
+  - lxml
+  - openpyxl
+  - xlrd
+  - xlsxwriter
+  - tabulate
+  - multiprocess
+  - pip:
+    - plotly
+    - kaleido==0.1.0.post1                                # <-- Potly requires for static image export
+    - pytest
+    - mkdocs
+    - mkdocs-material
+    - mkdocstrings-python
+    # OPTIONAL
+    - -e c:/users/${USERNAME}/.dev/custom_package         # <-- installs the local package in editable mode; changes in the source code take effect immediately

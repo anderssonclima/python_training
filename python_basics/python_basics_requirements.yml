@@ -1,0 +1,18 @@
+# used to create a python environment with basic requirements to run python_basics.ipynb
+# in the terminal (while in the base environment), run the following command:
+# conda env create -n python_basics --file "$env:USERPROFILE\python_basics_requirements.yml"
+# Note: replace $env:USERPROFILE\python_basics_requirements.yml for the actual local folder
+name: python_basics
+dependencies:
+  - python>=3.11, <3.12
+  - pip
+  - notebook
+  - pandas
+  - lxml
+  - openpyxl
+  - xlrd
+  - xlsxwriter
+  - multiprocess
+  - pip:
+    - plotly
+
